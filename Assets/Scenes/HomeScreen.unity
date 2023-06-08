@@ -1156,9 +1156,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mit Transforming HTW kannst du innovative Projekte auf dem Wilhelminenhof-Campus
-    entdecken und unsere Vision f\xFCr 2050 in AR live und vor Ort erleben. \nKlicke
-    auf START, um die interaktive Karte des HTW Campus zu \xF6ffnen."
+  m_text: "Mit Transforming HTW kannst du innovative Projekte auf dem Wilhelminenhof-Campus 
+    entdecken und unsere Vision f\xFCr 2050 in AR live und vor Ort erleben. \nDr\xFCcke
+    auf START, um die interaktive Karte zu \xF6ffnen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
