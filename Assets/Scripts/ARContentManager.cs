@@ -72,6 +72,11 @@ public class ARContentManager : MonoBehaviour
         if (!contentIsSpawned) {
             Vector3 instantiatePosition = new(userCamera.transform.position.x, closestARPlane.transform.position.y, userCamera.transform.position.z);
             Quaternion instantiateRotation = Quaternion.Euler(new(0, userCamera.transform.rotation.y, 0)); // beim offseten aufpassen,dass das die richtige Richtung ist !
+            internalARContent = Instantiate(aRContent, instantiatePosition, instantiateRotation);
+            internalARContent.AddComponent<ARPlane>();
+            internalARContent.GetComponent<ARPlane>().destroyOnRemoval = false;
+            
+            /*
             internalTree[0] = Instantiate(testTreeContent[0], instantiatePosition, instantiateRotation);
             internalTree[0].AddComponent<ARAnchor>();
             internalTree[0].GetComponent<ARAnchor>().destroyOnRemoval = false;
@@ -84,6 +89,7 @@ public class ARContentManager : MonoBehaviour
             //test
             oldYear = true;
             changeYear();
+            */
         }
 
     }
