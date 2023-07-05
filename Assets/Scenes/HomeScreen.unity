@@ -632,7 +632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51.1}
+  m_AnchoredPosition: {x: 0, y: 48}
   m_SizeDelta: {x: 235, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124047819
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fced08228430c34398f2e12577bd85b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a92bbc2c9be51554e9d2678f94b04080, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -740,8 +740,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287810712
-  m_fontColor: {r: 0.59450036, g: 0.8018868, b: 0.5711552, a: 1}
+    rgba: 4293325986
+  m_fontColor: {r: 0.63529414, g: 0.9568628, b: 0.90196085, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.21176472, g: 0.20000002, b: 0.18823531, a: 1}
-    m_HighlightedColor: {r: 0.39298087, g: 0.9245283, b: 0.23985407, a: 1}
+    m_HighlightedColor: {r: 0.5254902, g: 0.7294118, b: 0.14509805, a: 1}
     m_PressedColor: {r: 0.15294118, g: 0.73333335, b: 0.13725491, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1210,7 +1210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: -261}
+  m_AnchoredPosition: {x: 3, y: -271}
   m_SizeDelta: {x: 380, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694826053
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -5.9508057, y: 166.68732, z: -4.821762, w: 0.7546234}
+  m_margin: {x: -5.9508057, y: 160.94418, z: -4.821762, w: 0.7546234}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
