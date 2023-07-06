@@ -109,18 +109,19 @@ public class GpsService : MonoBehaviour
         // double current_lat, current_lon;
         // (current_lat,current_lon) = GetExcactLocation();
         // (current_lat, current_lon) = (last_lat, last_lon);
-        // (current_lat, current_lon) = (52.456300897744406f, 13.526658817006869f);
+        // (better_lat, better_lon) = (52.45619294882531, 13.52597904805195);
         double coAngle = (double)(Math.Cos((southEast_lat + northWest_lat) / 2));
-        global_x = earthRadius * better_lat * coAngle;
-        global_y = earthRadius * better_lon;
+        global_x = earthRadius * better_lon * coAngle;
+        global_y = earthRadius * better_lat;
         //percentage relative to fixpoints global coords
         relativ_x = (global_x-globalNorthWest_x)/(globalSouthEast_x-globalNorthWest_x);
         relativ_y = (global_y-globalNorthWest_y)/(globalSouthEast_y-globalNorthWest_y);
         // add relation
         x = northWest_x + ((southEast_x -northWest_x) * relativ_x);
-        y = northWest_y + ((southEast_y - northWest_y) * relativ_y);
+        // y axis is inverted -> all y values need to be multiplied by -1
+        y = -northWest_y + ((-southEast_y + northWest_y) * relativ_y);
 
-        return ((float)x, (float)y);
+        return ((float)x, -(float)y);
     }
 
     public Location GetCurrentLocation()

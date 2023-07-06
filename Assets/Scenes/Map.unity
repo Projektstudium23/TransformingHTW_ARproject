@@ -3818,15 +3818,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toleranceInMeters: 5
-  useReadingCount: 4
-  northWest_x: -261
-  northWest_y: 156
-  northWest_lat: 52.457400564297465
-  northWest_lon: 13.524870368237115
-  southEast_x: 243
-  southEast_y: -231
-  southEast_lat: 52.45422713441123
-  southEast_lon: 13.529290724359312
+  useReadingCount: 10
+  northWest_x: -562
+  northWest_y: 247
+  northWest_lat: 52.45816827777611
+  northWest_lon: 13.522332096081618
+  southEast_x: 512
+  southEast_y: -216
+  southEast_lat: 52.454342037716714
+  southEast_lon: 13.53137934127381
 --- !u!1 &859273643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6388,7 +6388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 243, y: -231}
+  m_AnchoredPosition: {x: 99, y: -111}
   m_SizeDelta: {x: 31.0366, y: 27.7525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250029637
