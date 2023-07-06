@@ -4078,6 +4078,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1891466044}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6747545563183703397, guid: 4ba029f7b053a442f810f62fa238459b,
         type: 3}
       propertyPath: m_Name
@@ -12808,7 +12848,7 @@ PrefabInstance:
     - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2940652382177875629, guid: 4ba029f7b053a442f810f62fa238459b,
         type: 3}
