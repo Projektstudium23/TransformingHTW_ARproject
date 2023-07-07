@@ -261,6 +261,7 @@ MonoBehaviour:
   - {fileID: 8551279}
   - {fileID: 1730089128}
   slider: {fileID: 1852212435}
+  image: {fileID: 15241183}
 --- !u!4 &32648153
 Transform:
   m_ObjectHideFlags: 0
@@ -2667,7 +2668,7 @@ GameObject:
   - component: {fileID: 1473470442}
   - component: {fileID: 1473470441}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2763,7 +2764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9481132, g: 1, b: 0.9971851, a: 1}
+  m_Color: {r: 0.22027414, g: 0.66476595, b: 0.8490566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
