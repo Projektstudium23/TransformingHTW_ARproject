@@ -6,14 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARContentManager : MonoBehaviour
 {
-    //test stuff
-
-    [SerializeField, Tooltip("testwise -> multiple GameObjectes for the change in years")]
-    private GameObject[] testTreeContent;  //-> vielleicht sinnvoller in eigenem Skript1
-    private GameObject[] internalTree;
-    [SerializeField]
-    TextMeshProUGUI changeYearBTNText;
-    bool oldYear = false;
+  
 
     /// <summary>
     /// /////////////////actual used///////////////////////////////
@@ -35,7 +28,6 @@ public class ARContentManager : MonoBehaviour
     private void Start() {
         userCamera = GameObject.Find("Main Camera");
         //   changeYearBTNText.text = "skip to 2030";
-        internalTree = new GameObject[testTreeContent.Length];
 
         if (userCamera == null) {
             throw new NullReferenceException("userCamera not found -> check string on Gameobject.Find()");
@@ -55,7 +47,6 @@ public class ARContentManager : MonoBehaviour
             if (distance < shortestDistanceToPlane && existingTrackedPlanes[i].alignment == PlaneAlignment.HorizontalUp) { // horizontal planes with normal upwards, floor
                 shortestDistanceToPlane = distance;
                 closestARPlane = existingTrackedPlanes[i].transform;
-
             }
         }
         if (closestARPlane == null) {
@@ -72,21 +63,7 @@ public class ARContentManager : MonoBehaviour
             internalARContent.GetComponent<ARPlane>().destroyOnRemoval = false;
 
             setupContentForGrowthScaling();
-           
-            /*
-            internalTree[0] = Instantiate(testTreeContent[0], instantiatePosition, instantiateRotation);
-            internalTree[0].AddComponent<ARAnchor>();
-            internalTree[0].GetComponent<ARAnchor>().destroyOnRemoval = false;
-
-            internalTree[1] = Instantiate(testTreeContent[1], instantiatePosition, instantiateRotation);
-            internalTree[1].AddComponent<ARAnchor>();
-            internalTree[1].GetComponent<ARAnchor>().destroyOnRemoval = false;
-            contentIsSpawned = true;
-
-            //test
-            oldYear = true;
-            changeYear();
-            */
+          
         }
 
     }
@@ -112,32 +89,8 @@ public class ARContentManager : MonoBehaviour
     }
 
 
-    public void changeYear() {
-
-        if (!oldYear) {
-            oldYear = true;
-            internalTree[0].SetActive(false);
-            internalTree[1].SetActive(true);
-            Debug.Log("old tree initialized");
-            internalTree[1].transform.rotation =
-               Quaternion.Euler(
-                   new(-90f, internalTree[1].transform.rotation.eulerAngles.y, internalTree[1].transform.rotation.eulerAngles.z));
-            internalTree[1].transform.localScale *= 2;
-            changeYearBTNText.text = "skip back \nto 2020";
-        } else {
-            oldYear = false;
-            //spawn young content
-            internalTree[1].SetActive(false);
-            internalTree[0].SetActive(true);
-            internalTree[0].transform.rotation =
-                Quaternion.Euler(
-                    new(-90f, internalTree[0].transform.rotation.eulerAngles.y, internalTree[0].transform.rotation.eulerAngles.z));
-
-            changeYearBTNText.text = "skip to 2030";
-            Debug.Log("young tree initialized");
-        }
-
-    }
+  
+  
 
     public void setupContentForGrowthScaling() {
         GameObject content = GameObject.FindGameObjectWithTag("AR-Content");

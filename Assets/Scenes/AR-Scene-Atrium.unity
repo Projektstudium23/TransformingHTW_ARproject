@@ -532,8 +532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cc7d9068d43274093d512c26930fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testTreeContent: []
-  changeYearBTNText: {fileID: 0}
   aRContent: {fileID: 76928986968129155, guid: 370f859254369ce4db7281d9b56ac269, type: 3}
 --- !u!114 &732556500 stripped
 MonoBehaviour:
@@ -860,9 +858,20 @@ PrefabInstance:
       objectReference: {fileID: 183902487}
     - target: {fileID: 3034395500264350334, guid: 8b5bb19c801fb2d478ddcef574ea8136,
         type: 3}
+      propertyPath: infoTextText
+      value: "Scanne den Boden um dich Herum, bis du genug Informationen gesammelt
+        hast. \nAnschlie\xDFend richte die Schablone aus und starte die Visualisierung."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034395500264350334, guid: 8b5bb19c801fb2d478ddcef574ea8136,
+        type: 3}
       propertyPath: scanningParent
       value: 
       objectReference: {fileID: 1079043233}
+    - target: {fileID: 3034395500264350334, guid: 8b5bb19c801fb2d478ddcef574ea8136,
+        type: 3}
+      propertyPath: detectedPlaneFragments
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3403810934912524180, guid: 8b5bb19c801fb2d478ddcef574ea8136,
         type: 3}
       propertyPath: m_Name
@@ -881,8 +890,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3403810934912524180, guid: 8b5bb19c801fb2d478ddcef574ea8136,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2945181631387704613}
   m_SourcePrefab: {fileID: 100100000, guid: 8b5bb19c801fb2d478ddcef574ea8136, type: 3}
+--- !u!1 &2945181631387704612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3403810934912524180, guid: 8b5bb19c801fb2d478ddcef574ea8136,
+    type: 3}
+  m_PrefabInstance: {fileID: 2945181631387704611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2945181631387704613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945181631387704612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae65638eacaf5264da1f1ded9f7d9197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1826519700}
+  sliderToText: {fileID: 1658994989}
+  startYear: 2030
+--- !u!114 &2945181631387704614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3034395500264350334, guid: 8b5bb19c801fb2d478ddcef574ea8136,
+    type: 3}
+  m_PrefabInstance: {fileID: 2945181631387704611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945181631387704612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bb4db4cbf77f049a360269aea4dc70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7224359094702156731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,6 +939,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 691882468}
@@ -900,6 +951,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
+      objectReference: {fileID: 2945181631387704614}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 2945181631387704613}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: contentSpawned
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: ActivateContent
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ControlUserInputsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572334405766432617, guid: 8d97f2eb61b932c499ac2cbbe8445725,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: ControlAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2464362173454535190, guid: 8d97f2eb61b932c499ac2cbbe8445725,
         type: 3}
