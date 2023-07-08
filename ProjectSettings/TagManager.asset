@@ -9,6 +9,12 @@ TagManager:
   - DistanceTinyForest2
   - DistanceUrbanGarden
   - DistanceAtrium
+  - GPSManager
+  - ButtonInitializeVerticalGarden
+  - ButtonInitializeUrbanGarden
+  - ButtonInitializeAtrium
+  - ButtonInitializeTinyForest1
+  - ButtonInitializeTinyForest2
   layers:
   - Default
   - TransparentFX

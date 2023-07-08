@@ -15,11 +15,11 @@ public class GPSService : MonoBehaviour
 
     //How to use?:
 
-    //There are four methods which can be called StartStopGPS(), GetCurrentLocation() and AddLocations()
-    //Since this is singleton those can be called from anywhere by using GpsService.Instance.MethodName()
-    //Use StartStopGPS() to activate or stop Gps returns true if succesfull; false if Gps fails -> dont forget to stop
+    //There are four (äh, das sind drei?) methods which can be called StartStopGPS(), GetCurrentLocation() and AddLocations()
+    //Since this is singleton those can be called from anywhere by using GPSService.Instance.MethodName()
+    //Use StartStopGPS() to activate or stop GPS returns true if succesfull; false if GPS fails -> dont forget to stop
     //Use GetCurrentLocation() to check if a Location was reached; will return a location(see bottom of script)
-    //To add known Locations use AddLocations() like this: GpsService.AddLocations(Location) or GpsService.AddLocations(ArrayOfLocations)
+    //To add known Locations use AddLocations() like this: GPSService.AddLocations(Location) or GPSService.AddLocations(ArrayOfLocations)
     //A new Location is created like this: Location meineLocation = new Location(string name, int id, double latitude, double longitude)
     //Use GetMapCoordinates() to get the current location inside the reference mask as x and y coordinates
 
@@ -27,8 +27,8 @@ public class GPSService : MonoBehaviour
 
     public static GPSService Instance;
 
-    // fine tune for gps accuracy current values are just my best guess
-    // update frequency only matters if gps is running in coroutine which refuses to work for now
+    // fine tune for GPS accuracy current values are just my best guess
+    // update frequency only matters if GPS is running in coroutine which refuses to work for now
     public double toleranceInMeters = 2f;
     public int useReadingCount = 4;
     // top left of mask
@@ -145,6 +145,12 @@ public class GPSService : MonoBehaviour
         {
             knownLocations.Add(loc);
         }
+    }
+
+    public float GetDistanceToPointWithID(int id)
+    {
+        // @Paul -> bitte implementieren noch :)
+        return 0f;
     }
 
     private void AddToReadings(double lat, double lon)
