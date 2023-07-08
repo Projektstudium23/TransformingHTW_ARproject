@@ -7,12 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 public class ARContentManager : MonoBehaviour
 {
   
-
-    /// <summary>
-    /// /////////////////actual used///////////////////////////////
-    /// </summary>
-
-    [Tooltip("Drop your AR Content (may be a hole scene) here, s. readme for more details")]
+    [Tooltip("Drop your AR Content (may be a hole scene) here")]
     [SerializeField]
     private GameObject aRContent;
     private GameObject internalARContent;
@@ -21,13 +16,12 @@ public class ARContentManager : MonoBehaviour
     private ARPlane[] existingTrackedPlanes;
 
     private GameObject userCamera;
-
+    // the users position is the represented by the camera, NOT the XR-Origin
 
 
 
     private void Start() {
         userCamera = GameObject.Find("Main Camera");
-        //   changeYearBTNText.text = "skip to 2030";
 
         if (userCamera == null) {
             throw new NullReferenceException("userCamera not found -> check string on Gameobject.Find()");
@@ -41,7 +35,7 @@ public class ARContentManager : MonoBehaviour
         float shortestDistanceToPlane = 100; // doesn`t matter, just something high
 
         existingTrackedPlanes = GetComponentsInChildren<ARPlane>();
-
+        // find the closest tracked ground plane
         for (int i = 0; i < existingTrackedPlanes.Length; i++) {
             float distance = DistanceBetweenObjects(existingTrackedPlanes[i].transform.position, userCamera.transform.position);
             if (distance < shortestDistanceToPlane && existingTrackedPlanes[i].alignment == PlaneAlignment.HorizontalUp) { // horizontal planes with normal upwards, floor
@@ -54,15 +48,15 @@ public class ARContentManager : MonoBehaviour
             return;
         }
 
-
+        // spawn content on specific position and rotation (user depended)
         if (!contentIsSpawned) {
-            Vector3 instantiatePosition = new(userCamera.transform.position.x, closestARPlane.transform.position.y, userCamera.transform.position.z); // x, z anpassen
-            Quaternion instantiateRotation = Quaternion.Euler(new(0, userCamera.transform.rotation.eulerAngles.y, 0)); // beim offseten aufpassen,dass das die richtige Richtung ist !
+            Vector3 instantiatePosition = new(userCamera.transform.position.x, closestARPlane.transform.position.y, userCamera.transform.position.z); //position of user
+            Quaternion instantiateRotation = Quaternion.Euler(new(0, userCamera.transform.rotation.eulerAngles.y, 0)); // correct orientation
             internalARContent = Instantiate(aRContent, instantiatePosition, instantiateRotation);
-            internalARContent.AddComponent<ARPlane>();
-            internalARContent.GetComponent<ARPlane>().destroyOnRemoval = false;
+            internalARContent.AddComponent<ARAnchor>();
+            internalARContent.GetComponent<ARAnchor>().destroyOnRemoval = false; 
 
-            setupContentForGrowthScaling();
+            setupContentForGrowthScaling(); // might be ignored in other cases!
           
         }
 
@@ -91,6 +85,7 @@ public class ARContentManager : MonoBehaviour
 
   
   
+    //pretty sure, this does not work properly
 
     public void setupContentForGrowthScaling() {
         GameObject content = GameObject.FindGameObjectWithTag("AR-Content");
