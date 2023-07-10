@@ -175,7 +175,7 @@ public class GPSService : MonoBehaviour
 	public float GetDistanceToPointWithID(int id)
 	{
 		float noMatchFound = -100;
-		GetExcactLocation(); // setting new better lat and long
+		//GetExcactLocation(); // setting new better lat and long
 		switch (id){
 			case 1:
 				return GetDistanceToLocation(verticalGarden);

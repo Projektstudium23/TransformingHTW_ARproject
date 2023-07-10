@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HomeScreen.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 1e0c935a2710f4ff4992c7a21ea29baa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR-Scene-Atrium.unity
     guid: c31ced8a9e1c07a4c855a363d724f29f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TinyForrestSzene.unity
     guid: 2854a6293cba2d84c83936d9695a904f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TinyForrestSzene 1.unity
     guid: f7a6984526550eb43b00491b55120ce1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/UrbanGardenSzene.unity
     guid: 475f3d18ca11b6744b3d2055946db9d8
   m_configObjects:
