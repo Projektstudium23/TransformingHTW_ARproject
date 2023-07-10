@@ -159,7 +159,7 @@ public class GpsService : MonoBehaviour
         lonQueue.Enqueue(lon);
     }
 
-    private bool GetDistance(float lat1, float lon1, float lat2, float lon2, float radius)
+    private double GetDistance(float lat1, float lon1, float lat2, float lon2)
     {
          
         var dLat = lat2 * Mathf.PI / 180 - lat1 * Mathf.PI / 180;
@@ -172,7 +172,18 @@ public class GpsService : MonoBehaviour
         distance = distance * 1000f;
         double distanceFloat = (double)distance;
 
-        if (distanceFloat < radius)
+        return distanceFloat;
+    }
+
+    public float GetDistanceToLocation(Location loc) 
+    {
+        return (float)GetDistance((float)better_lat, (float)better_lon, (float)loc.lat,(float)loc.lon);
+    }
+
+    private bool InRange(float lat1, float lon1, float lat2, float lon2, float radius) 
+    {
+        double dist = GetDistance(lat1, lon1, lat1, lat2);
+        if (dist < radius)
         {
             return true;
         }
@@ -183,7 +194,7 @@ public class GpsService : MonoBehaviour
     {
         foreach (Location loc in knownLocations)
         {
-            if (GetDistance((float)better_lat, (float)better_lon, (float)loc.lat, (float)loc.lon, (float)toleranceInMeters))
+            if (InRange((float)better_lat, (float)better_lon, (float)loc.lat, (float)loc.lon, (float)toleranceInMeters))
             {
                 currentLocation = loc;
                 return true;
