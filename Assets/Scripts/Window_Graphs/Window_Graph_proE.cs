@@ -95,14 +95,15 @@ public class Window_Graph_proE : MonoBehaviour {
         }
     }
 
-    private GameObject CreateCircle(Vector2 anchoredPosition, float value) {
+private GameObject CreateCircle(Vector2 anchoredPosition, float value)
+    {
         GameObject gameObject = new GameObject("circle", typeof(Image), typeof(EventTrigger));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().sprite = circleSprite;
         gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = anchoredPosition;
-        rectTransform.sizeDelta = new Vector2(11, 11);
+        rectTransform.sizeDelta = new Vector2(33.5f, 33.5f); 
         rectTransform.anchorMin = new Vector2(0, 0);
         rectTransform.anchorMax = new Vector2(0, 0);
 
@@ -113,7 +114,9 @@ public class Window_Graph_proE : MonoBehaviour {
 
         GameObject imageObj = new GameObject("image", typeof(Image));
         imageObj.transform.SetParent(tooltip.transform, false);
-        imageObj.GetComponent<Image>().color = Color.white;
+        Image imageComponent = imageObj.GetComponent<Image>(); 
+        imageComponent.color = Color.green;
+        
 
 
         RectTransform imageRectTransform = imageObj.GetComponent<RectTransform>();
@@ -127,10 +130,10 @@ public class Window_Graph_proE : MonoBehaviour {
         GameObject textObj = new GameObject("text", typeof(TextMeshProUGUI));
         textObj.transform.SetParent(tooltip.transform, false);
         TextMeshProUGUI textComponent = textObj.GetComponent<TextMeshProUGUI>();
-        textComponent.text = value.ToString(); 
-        textComponent.color = Color.black;
-        textComponent.fontSize = 16; 
-        textComponent.alignment = TextAlignmentOptions.Center; 
+        textComponent.text = value.ToString();
+        textComponent.color = Color.white;
+        textComponent.fontSize = 48;
+        textComponent.alignment = TextAlignmentOptions.Center;
 
 
         RectTransform textRectTransform = textObj.GetComponent<RectTransform>();
@@ -142,9 +145,9 @@ public class Window_Graph_proE : MonoBehaviour {
 
 
         RectTransform tooltipRect = tooltip.GetComponent<RectTransform>();
-        tooltipRect.sizeDelta = new Vector2(60, 40); 
-        tooltipRect.pivot = new Vector2(0, 0.5f); 
-        tooltipRect.anchoredPosition = new Vector2(50, 0); 
+        tooltipRect.sizeDelta = new Vector2(60, 40);
+        tooltipRect.pivot = new Vector2(0, 0.5f);
+        tooltipRect.anchoredPosition = new Vector2(50, 0);
         tooltip.SetActive(false);
 
 
