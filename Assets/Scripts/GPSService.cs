@@ -43,11 +43,11 @@ public class GPSService : MonoBehaviour
 
 
 	private Location unknownLocation = new Location("unknown", -1, 0, 0);
-	private Location verticalGarden = new Location("verticalGarden", 1, 52.455473289, 13.525836944);
-	private Location urbanGarden = new Location("urbanGarden", 2, 52.4549942016602, 13.5262651443481);
-	private Location atrium = new Location("atrium", 3, 52.45740020, 13.52608391);
-	private Location tinyForest1 = new Location("tinyForest1", 4, 52.45561748, 13.52524089);
-	private Location tinyForest2 = new Location("tinyForest2", 5, 52.45707256, 13.52705760);
+	private Location verticalGarden = new Location("verticalGarden", 1, 52.45540729326834, 13.525802763997198);
+	private Location urbanGarden = new Location("urbanGarden", 2, 52.454917152510774, 13.526318170207423);
+	private Location atrium = new Location("atrium", 3, 52.45732808177884, 13.526134724654938);
+	private Location tinyForest1 = new Location("tinyForest1", 4, 52.45562221930948, 13.525294975950519);
+	private Location tinyForest2 = new Location("tinyForest2", 5, 52.45705233281725, 13.527056453931293);
 
 	private Location currentLocation;
 	private List<Location> knownLocations = new List<Location>();

@@ -8553,7 +8553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toleranceInMeters: 5
-  useReadingCount: 10
+  useReadingCount: 7
   northWest_x: -562
   northWest_y: 247
   northWest_lat: 52.45816827777611
