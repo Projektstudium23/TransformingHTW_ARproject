@@ -89,11 +89,19 @@ public class GPSService : MonoBehaviour
 	{
 		if (listening)
 		{
-			Input.location.Start(1f,1f);
-			last_lat = Input.location.lastData.latitude;
-			last_lon = Input.location.lastData.longitude;
-			AddToReadings(last_lat, last_lon);
-			GetExcactLocation();
+			double new_lat, new_lon;
+            Input.location.Start(1f, 1f);
+            new_lat = Input.location.lastData.latitude;
+			new_lon = Input.location.lastData.longitude;
+            
+			if (new_lat != last_lat)
+			{
+                last_lat = new_lat;
+                last_lon = new_lon;
+                AddToReadings(last_lat, last_lon);
+                GetExcactLocation();
+            }
+
 		}
 
 	}
