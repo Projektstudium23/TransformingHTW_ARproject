@@ -28,8 +28,8 @@ public class GPSService : MonoBehaviour
 
 	// fine tune for gps accuracy current values are just my best guess
 	// update frequency only matters if gps is running in coroutine which refuses to work for now
-	public double toleranceInMeters = 2f;
-	public int useReadingCount = 4;
+	public double toleranceInMeters;
+	public int useReadingCount;
 	// top left of mask
 	public double northWest_x = 0;
 	public double northWest_y = 0;
@@ -51,7 +51,7 @@ public class GPSService : MonoBehaviour
 
 	private Location currentLocation;
 	private List<Location> knownLocations = new List<Location>();
-	private bool listening = false;
+	public bool listening = false;
 	private double earthRadius = 6378.137f;
 	private double globalNorthWest_x;
 	private double globalNorthWest_y;
@@ -175,7 +175,6 @@ public class GPSService : MonoBehaviour
 	public float GetDistanceToPointWithID(int id)
 	{
 		float noMatchFound = -100;
-		GetExcactLocation(); // setting new better lat and long
 		switch (id){
 			case 1:
 				return GetDistanceToLocation(verticalGarden);
