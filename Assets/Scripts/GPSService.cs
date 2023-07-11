@@ -89,7 +89,7 @@ public class GPSService : MonoBehaviour
 	{
 		if (listening)
 		{
-			Input.location.Start();
+			Input.location.Start(1f,1f);
 			last_lat = Input.location.lastData.latitude;
 			last_lon = Input.location.lastData.longitude;
 			AddToReadings(last_lat, last_lon);
@@ -102,7 +102,7 @@ public class GPSService : MonoBehaviour
 	{
 		listening = !listening;
 
-		Input.location.Start();
+		Input.location.Start(1f,1f);
 		if (Input.location.isEnabledByUser == false)
 		{
 			listening = false;
