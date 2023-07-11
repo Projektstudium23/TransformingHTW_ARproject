@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HomeScreen.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map.unity
     guid: 1e0c935a2710f4ff4992c7a21ea29baa
   - enabled: 0
