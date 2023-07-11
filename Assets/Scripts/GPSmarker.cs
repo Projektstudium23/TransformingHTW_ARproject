@@ -11,7 +11,7 @@ public class GpsMarker : MonoBehaviour
         GPSService.Instance.StartStopGPS();
         trans = GetComponent<RectTransform>();
     }
-    // Update is called once per frame
+
     void Update()
     {
         //Debug.Log("hi");
@@ -19,5 +19,11 @@ public class GpsMarker : MonoBehaviour
         (x, y) = GPSService.Instance.GetMapCoordinates();
         //Debug.Log(x+ ", " + y);
         trans.anchoredPosition = new Vector3(x, y, transform.position.z);
+    }
+
+    // case of scene change and destroying of map scene
+    private void OnDestroy()
+    {
+        GPSService.Instance.StartStopGPS();
     }
 }
