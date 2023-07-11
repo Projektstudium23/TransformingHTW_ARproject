@@ -12,7 +12,7 @@ public class PrefabSpawner : MonoBehaviour
     private float maxSpawnDistance = 10f;
 
     private List<GameObject> spawnedPrefabs = new List<GameObject>();
-    private float prefabWidth = 4f;
+    private float prefabWidth = 32f;
 
     private void Start()
     {
