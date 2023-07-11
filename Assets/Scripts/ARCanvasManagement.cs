@@ -51,7 +51,7 @@ public class ARButtonManagement : MonoBehaviour
 	// auf übereinstimmende location checken, um zugehörigen initializeAR Button zu aktivieren oder Entfernung anzuzeigen
 	void checkForSpecificLocationThroughID(int id)
 	{
-		if (GPSService.Instance.listening || testing) 
+		if (GPSService.Instance.StartStopGPS() || testing) // might cause problems? - how to know when GPS method starts or stops GPS?
 		{
 			Location currentLocation = new Location("test", 80, 1, 2); //for testing
 			if (!testing)
