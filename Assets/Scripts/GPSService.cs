@@ -28,8 +28,8 @@ public class GPSService : MonoBehaviour
 
 	// fine tune for gps accuracy current values are just my best guess
 	// update frequency only matters if gps is running in coroutine which refuses to work for now
-	public double toleranceInMeters;
-	public int useReadingCount;
+	public double toleranceInMeters = 2f;
+	public int useReadingCount = 4;
 	// top left of mask
 	public double northWest_x = 0;
 	public double northWest_y = 0;
@@ -43,15 +43,15 @@ public class GPSService : MonoBehaviour
 
 
 	private Location unknownLocation = new Location("unknown", -1, 0, 0);
-	private Location verticalGarden = new Location("verticalGarden", 1, 52.45540729326834, 13.525802763997198);
-	private Location urbanGarden = new Location("urbanGarden", 2, 52.454917152510774, 13.526318170207423);
-	private Location atrium = new Location("atrium", 3, 52.45732808177884, 13.526134724654938);
-	private Location tinyForest1 = new Location("tinyForest1", 4, 52.45562221930948, 13.525294975950519);
-	private Location tinyForest2 = new Location("tinyForest2", 5, 52.45705233281725, 13.527056453931293);
+	private Location verticalGarden = new Location("verticalGarden", 1, 52.455473289, 13.525836944);
+	private Location urbanGarden = new Location("urbanGarden", 2, 52.4549942016602, 13.5262651443481);
+	private Location atrium = new Location("atrium", 3, 52.45740020, 13.52608391);
+	private Location tinyForest1 = new Location("tinyForest1", 4, 52.45561748, 13.52524089);
+	private Location tinyForest2 = new Location("tinyForest2", 5, 52.45707256, 13.52705760);
 
 	private Location currentLocation;
 	private List<Location> knownLocations = new List<Location>();
-	public bool listening = false;
+	private bool listening = false;
 	private double earthRadius = 6378.137f;
 	private double globalNorthWest_x;
 	private double globalNorthWest_y;
@@ -89,19 +89,11 @@ public class GPSService : MonoBehaviour
 	{
 		if (listening)
 		{
-			double new_lat, new_lon;
-            Input.location.Start(1f, 1f);
-            new_lat = Input.location.lastData.latitude;
-			new_lon = Input.location.lastData.longitude;
-            
-			if (new_lat != last_lat)
-			{
-                last_lat = new_lat;
-                last_lon = new_lon;
-                AddToReadings(last_lat, last_lon);
-                GetExcactLocation();
-            }
-
+			Input.location.Start();
+			last_lat = Input.location.lastData.latitude;
+			last_lon = Input.location.lastData.longitude;
+			AddToReadings(last_lat, last_lon);
+			GetExcactLocation();
 		}
 
 	}
@@ -110,7 +102,7 @@ public class GPSService : MonoBehaviour
 	{
 		listening = !listening;
 
-		Input.location.Start(1f,1f);
+		Input.location.Start();
 		if (Input.location.isEnabledByUser == false)
 		{
 			listening = false;
@@ -183,6 +175,7 @@ public class GPSService : MonoBehaviour
 	public float GetDistanceToPointWithID(int id)
 	{
 		float noMatchFound = -100;
+		GetExcactLocation(); // setting new better lat and long
 		switch (id){
 			case 1:
 				return GetDistanceToLocation(verticalGarden);
