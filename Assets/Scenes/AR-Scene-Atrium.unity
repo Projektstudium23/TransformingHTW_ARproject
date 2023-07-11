@@ -1114,12 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1699695540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4387433236432302286, guid: 8d97f2eb61b932c499ac2cbbe8445725,
-    type: 3}
-  m_PrefabInstance: {fileID: 7224359094702156731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1699695541 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7278751465379397015, guid: 8d97f2eb61b932c499ac2cbbe8445725,
@@ -1220,7 +1214,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnBTN
       value: 
-      objectReference: {fileID: 1699695540}
+      objectReference: {fileID: 952149540}
     - target: {fileID: 3034395500264350334, guid: 8b5bb19c801fb2d478ddcef574ea8136,
         type: 3}
       propertyPath: scanningBar
