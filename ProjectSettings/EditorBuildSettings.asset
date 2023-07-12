@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AR-Scene-Atrium.unity
     guid: c31ced8a9e1c07a4c855a363d724f29f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TinyForrestSzene.unity
     guid: 2854a6293cba2d84c83936d9695a904f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TinyForrestSzene 1.unity
     guid: f7a6984526550eb43b00491b55120ce1
   - enabled: 0
