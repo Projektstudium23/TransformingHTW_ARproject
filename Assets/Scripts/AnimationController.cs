@@ -12,7 +12,7 @@ public class PrefabSpawner : MonoBehaviour
     private float maxSpawnDistance = 10f;
 
     private List<GameObject> spawnedPrefabs = new List<GameObject>();
-    private float prefabWidth = 32f;
+    private float prefabWidth = 4f;
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class PrefabSpawner : MonoBehaviour
     {
         float spawnDistance = Mathf.Lerp(minSpawnDistance, maxSpawnDistance, value);
 
-        int rowCapacity = Mathf.FloorToInt(spawnArea.localScale.x / (prefabWidth / 2));
+        int rowCapacity = Mathf.FloorToInt(spawnArea.localScale.x / prefabWidth);
         int rowCount = Mathf.CeilToInt(value / rowCapacity);
 
         // Entferne überschüssige Prefabs
@@ -42,26 +42,12 @@ public class PrefabSpawner : MonoBehaviour
             int currentRow = currentPrefabIndex / rowCapacity;
             int currentColumn = currentPrefabIndex % rowCapacity;
 
-            float offsetX = (rowCapacity * prefabWidth) / 2f;
-            float offsetY = (rowCount * prefabWidth) / 2f;
+            float offsetX = (rowCapacity * prefabWidth) / 2f - prefabWidth / 2f;
+            float offsetY = spawnArea.localScale.y / 2f;
 
-            Vector3 spawnPosition = spawnArea.position + new Vector3((currentColumn * prefabWidth) - offsetX, (currentRow * prefabWidth) - offsetY, 0f);
+            Vector3 spawnPosition = spawnArea.position + new Vector3((currentColumn * prefabWidth) - offsetX, -offsetY - (currentRow * prefabWidth), 0f);
             GameObject spawnedPrefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             spawnedPrefabs.Add(spawnedPrefab);
-
-            // Starte eine neue Reihe, wenn die maximale Anzahl an Prefabs pro Reihe erreicht ist
-            if (currentColumn == rowCapacity - 1 && currentRow < rowCount - 1)
-            {
-                currentRow++;
-                currentColumn = 0;
-
-                spawnPosition = spawnArea.position + new Vector3((currentColumn * prefabWidth) - offsetX, (currentRow * prefabWidth) - offsetY, 0f);
-                spawnedPrefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-                spawnedPrefabs.Add(spawnedPrefab);
-            }
         }
     }
-
 }
-
-
