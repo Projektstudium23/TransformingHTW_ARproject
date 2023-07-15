@@ -218,10 +218,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1545625191}
+  - {fileID: 1124047818}
   - {fileID: 1344678770}
   - {fileID: 1694826052}
   - {fileID: 1478034146}
-  - {fileID: 1124047818}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 1124047820}
   - component: {fileID: 1124047819}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,7 +624,7 @@ RectTransform:
   m_GameObject: {fileID: 1124047817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 123836244}
@@ -632,7 +632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 48}
+  m_AnchoredPosition: {x: -14.2, y: -294}
   m_SizeDelta: {x: 235, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124047819
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a92bbc2c9be51554e9d2678f94b04080, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8973869b0655ac4894bd50951cd38d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -740,8 +740,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293325986
-  m_fontColor: {r: 0.63529414, g: 0.9568628, b: 0.90196085, a: 1}
+    rgba: 4281348918
+  m_fontColor: {r: 0.21176472, g: 0.20000002, b: 0.18823531, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -843,7 +843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -67}
+  m_AnchoredPosition: {x: 0, y: -108}
   m_SizeDelta: {x: 480, y: 92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344678771
@@ -875,8 +875,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279637528
-  m_fontColor: {r: 0.09433961, g: 0.08677464, b: 0.08677464, a: 1}
+    rgba: 4281348918
+  m_fontColor: {r: 0.21176472, g: 0.20000002, b: 0.18823531, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -981,7 +981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 61.3}
+  m_AnchoredPosition: {x: 0, y: 67.9}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478034147
@@ -1005,7 +1005,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.21176472, g: 0.20000002, b: 0.18823531, a: 1}
+    m_NormalColor: {r: 0.627451, g: 0.9450981, b: 0.8862746, a: 1}
     m_HighlightedColor: {r: 0.5254902, g: 0.7294118, b: 0.14509805, a: 1}
     m_PressedColor: {r: 0.15294118, g: 0.73333335, b: 0.13725491, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1210,7 +1210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: -271}
+  m_AnchoredPosition: {x: 0, y: -262}
   m_SizeDelta: {x: 380, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694826053
@@ -1233,9 +1233,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mit Transforming HTW kannst du innovative Projekte auf dem Wilhelminenhof-Campus 
-    entdecken und unsere Vision f\xFCr 2050 in AR live und vor Ort erleben. \nDr\xFCcke
-    auf START, um die interaktive Karte zu \xF6ffnen."
+  m_text: "Mit Transforming HTW kannst du nachhaltige Projekte auf dem Campus-Wilhelminenhof 
+    entdecken.\n\nDr\xFCcke auf START, um die interaktive Karte zu \xF6ffnen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1244,8 +1243,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279637528
-  m_fontColor: {r: 0.09433961, g: 0.08677464, b: 0.08677464, a: 1}
+    rgba: 4281348918
+  m_fontColor: {r: 0.21176472, g: 0.20000002, b: 0.18823531, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
