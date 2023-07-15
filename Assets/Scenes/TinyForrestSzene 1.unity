@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -931,6 +931,72 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
       value: ControlAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2179778967150441896, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2179778967150441896, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2179778967150441896, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4,
+        type: 2}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816788174934509813, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344243397865918730, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344243397865918730, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344243397865918730, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
     - target: {fileID: 3407973231168522472, guid: f624183b96dcc9f41a8070d6ce1173f6,
         type: 3}
       propertyPath: m_Sprite
@@ -946,6 +1012,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas-AR-TinyForrestB-Initialisation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4,
+        type: 2}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648935581330855129, guid: f624183b96dcc9f41a8070d6ce1173f6,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8783593189963951670, guid: f624183b96dcc9f41a8070d6ce1173f6,
         type: 3}
@@ -1053,7 +1155,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4002427648257748765, guid: f624183b96dcc9f41a8070d6ce1173f6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f624183b96dcc9f41a8070d6ce1173f6, type: 3}
