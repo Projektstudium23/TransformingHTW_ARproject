@@ -92,7 +92,7 @@ private GameObject CreateCircle(Vector2 anchoredPosition, float value)
         TextMeshProUGUI textComponent = textObj.GetComponent<TextMeshProUGUI>();
         textComponent.text = value.ToString();
         textComponent.color = Color.white;
-        textComponent.fontSize = 48;
+        textComponent.fontSize = 20;
         textComponent.alignment = TextAlignmentOptions.Center;
 
 
@@ -193,7 +193,7 @@ private GameObject CreateCircle(Vector2 anchoredPosition, float value)
     private void CreateDotConnection(Vector2 dotPositionA, Vector2 dotPositionB) {
         GameObject gameObject = new GameObject("dotConnection", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
-        gameObject.GetComponent<Image>().color = new Color(r,g,b, .5f);
+        gameObject.GetComponent<Image>().color = new Color(r,g,b, .60f);
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
         Vector2 dir = (dotPositionB - dotPositionA).normalized;
         float distance = Vector2.Distance(dotPositionA, dotPositionB);
