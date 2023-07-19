@@ -23,6 +23,7 @@ public class ARButtonManagement : MonoBehaviour
 	bool updateDistance = false;
 	int currentIDtoCheck = 0;
 
+<<<<<<< Updated upstream
 	[SerializeField]
 	bool testing;
 
@@ -97,4 +98,75 @@ public class ARButtonManagement : MonoBehaviour
 			}
 		}
 	}
+=======
+    // Update is called once per frame
+    void Update()
+    {
+        if (updateDistance)
+        {
+            checkForSpecificLocationThroughID(currentIDtoCheck);
+        }
+    }
+
+    public void ARcanvasActivated(int id)
+    {
+        currentIDtoCheck = id;
+        updateDistance = true;
+        Debug.Log("updated Distance: " + updateDistance);
+    }
+
+    public void ARCanvasDeactivated()
+    {
+        updateDistance = false;
+        currentIDtoCheck = 0;
+        Debug.Log("updated Distance: " + updateDistance);
+    }
+
+    // auf übereinstimmende location checken, um zugehörigen initializeAR Button zu aktivieren oder Entfernung anzuzeigen
+    void checkForSpecificLocationThroughID(int id)
+    {
+
+        distanceText = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<TextMeshProUGUI>();
+
+        Location currentLocation = GPSService.Instance.GetCurrentLocation();
+
+
+        string locationMatchedClickButton = "Du bist am richtigen Ort. Klicke jetzt den Button";
+
+        if (currentLocation.id == id)
+        {
+            distanceText.text = locationMatchedClickButton;
+            switch (id)
+            {
+                case 1:
+                    activateVerticalGarden = GameObject.FindGameObjectWithTag("ButtonInitializeVerticalGarden").GetComponent<Button>();
+                    activateVerticalGarden.interactable = true;
+                    break;
+                case 2:
+                    activateUrbanGarden = GameObject.FindGameObjectWithTag("ButtonInitializeUrbanGarden").GetComponent<Button>();
+                    activateUrbanGarden.interactable = true;
+                    break;
+                case 3:
+                    activateAtrium = GameObject.FindGameObjectWithTag("ButtonInitializeAtrium").GetComponent<Button>();
+                    activateAtrium.interactable = true;
+                    break;
+                case 4:
+                    activateTinyForest1 = GameObject.FindGameObjectWithTag("ButtonInitializeTinyForest1").GetComponent<Button>();
+                    activateTinyForest1.interactable = true;
+                    break;
+                case 5:
+                    activateTinyForest2 = GameObject.FindGameObjectWithTag("ButtonInitializeTinyForest2").GetComponent<Button>();
+                    activateTinyForest2.interactable = true;
+                    break;
+            }
+        }
+        else
+        {
+            float distanceToDisplay = Mathf.Round(GPSService.Instance.GetDistanceToPointWithID(id));
+            string textToDisplay = "Du bist noch " + distanceToDisplay + " m vom Einstiegspunkt entfernt";
+            distanceText.text = textToDisplay;
+        }
+    }
+>>>>>>> Stashed changes
 }
+

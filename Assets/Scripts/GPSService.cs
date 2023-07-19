@@ -183,6 +183,10 @@ public class GPSService : MonoBehaviour
 	public float GetDistanceToPointWithID(int id)
 	{
 		float noMatchFound = -100;
+<<<<<<< Updated upstream
+=======
+		
+>>>>>>> Stashed changes
 		switch (id){
 			case 1:
 				return GetDistanceToLocation(verticalGarden);
