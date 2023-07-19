@@ -51,7 +51,7 @@ public class GPSService : MonoBehaviour
 
 	private Location currentLocation;
 	private List<Location> knownLocations = new List<Location>();
-	private bool listening = false;
+	public bool listening = false;
 	private double earthRadius = 6378.137f;
 	private double globalNorthWest_x;
 	private double globalNorthWest_y;

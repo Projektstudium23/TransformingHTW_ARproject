@@ -50,18 +50,15 @@ public class ARButtonManagement : MonoBehaviour
     void checkForSpecificLocationThroughID(int id) {
 
         distanceText = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<TextMeshProUGUI>();
-        Debug.Log("distanceTExt: " + distanceText);
 
-        if (GPSService.Instance.StartStopGPS() || testing) // might cause problems? - how to know when GPS method starts or stops GPS?
+        if (GPSService.Instance.listening) 
         {
-            Location currentLocation = new Location("test", 80, 1, 2); //for testing
-            if (!testing) {
-                currentLocation = GPSService.Instance.GetCurrentLocation();
-            }
+            Location currentLocation = GPSService.Instance.GetCurrentLocation();
+            
 
             string locationMatchedClickButton = "Du bist am richtigen Ort. Klicke jetzt den Button";
 
-            if (currentLocation.id == id || testing) {
+            if (currentLocation.id == id) {
                 distanceText.text = locationMatchedClickButton;
                 switch (id) {
                     case 1:
